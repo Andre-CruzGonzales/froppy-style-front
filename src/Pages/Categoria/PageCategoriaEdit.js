@@ -36,7 +36,7 @@ const PageCategoriaEdit = () => {
     formData.append("nombre", categoria);
     formData.append("estado", "A");
     const res = await axios.put(
-      `https://20.124.206.156:10801/api/categorias/update/${params.id}`,
+      `http://20.124.206.156:10801/api/categorias/update/${params.id}`,
       //`http://localhost:10801/api/categorias/update/${params.id}`,
       formData
     );

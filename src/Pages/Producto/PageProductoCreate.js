@@ -23,7 +23,7 @@ const PageProductoCreate = () => {
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        "http://https://20.124.206.156:10801/api/categorias/get"
+        "http://20.124.206.156:10801/api/productos/create"
       );
       console.log(res);
       setCategorias(res.data);
