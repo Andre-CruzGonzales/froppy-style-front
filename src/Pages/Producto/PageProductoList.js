@@ -12,7 +12,9 @@ const PageProductoList = () => {
   let history = useHistory();
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:10801/api/productos/get");
+      const res = await axios.get(
+        "http://https://desarrollo-software.herokuapp.com/api/productos/get"
+      );
       console.log(res);
       setData(res.data);
     })();
