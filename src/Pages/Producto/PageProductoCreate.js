@@ -22,7 +22,9 @@ const PageProductoCreate = () => {
   //const [addCategoria, setAddCategoria] = useState(initialCategoriaState);
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:10801/api/categorias/get");
+      const res = await axios.get(
+        "http://https://desarrollo-software.herokuapp.com/api/categorias/get"
+      );
       console.log(res);
       setCategorias(res.data);
     })();
@@ -46,7 +48,7 @@ const PageProductoCreate = () => {
     formData.append("estado", "A");
     formData.append("categoria", producto.categoria);
     const res = await axios.post(
-      "http://localhost:10801/api/productos/create",
+      "http://https://desarrollo-software.herokuapp.com/api/productos/create",
       formData
     );
 

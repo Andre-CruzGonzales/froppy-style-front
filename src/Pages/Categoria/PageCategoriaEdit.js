@@ -19,7 +19,7 @@ const PageCategoriaEdit = () => {
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        `http://localhost:10801/api/categorias/get/${params.id}`
+        `http://https://desarrollo-software.herokuapp.com/api/categorias/get/${params.id}`
       );
       console.log(res.data);
       setCategoria(res.data);
@@ -36,7 +36,7 @@ const PageCategoriaEdit = () => {
     formData.append("nombre", categoria);
     formData.append("estado", "A");
     const res = await axios.put(
-      `http://localhost:10801/api/categorias/update/${params.id}`,
+      `http://https://desarrollo-software.herokuapp.com/api/categorias/update/${params.id}`,
       formData
     );
 

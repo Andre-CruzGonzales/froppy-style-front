@@ -26,7 +26,7 @@ const PageCategoria = () => {
     formData.append("nombre", categoria);
     formData.append("estado", "A");
     const res = await axios.post(
-      "http://localhost:10801/api/categorias/create",
+      "https://desarrollo-software.herokuapp.com/api/categorias/create",
       formData
     );
 

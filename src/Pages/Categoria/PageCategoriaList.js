@@ -12,7 +12,9 @@ const PageCategoriaList = () => {
   let history = useHistory();
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:10801/api/categorias/get");
+      const res = await axios.get(
+        "http://https://desarrollo-software.herokuapp.com/api/categorias/get"
+      );
       console.log(res);
       setData(res.data);
     })();
