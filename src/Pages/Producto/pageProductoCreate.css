@@ -1,0 +1,14 @@
+.contenedor {
+  display: flex;
+  /*justify-content: space-between;*/
+  margin: 50px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.contenedor .item-1 {
+  margin-right: 20%;
+  /*width: 50wh;*/
+}
+.contenedor .item-2 {
+  width: 40vw;
+}

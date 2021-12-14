@@ -1,0 +1,50 @@
+.container-create {
+  margin-top: 50px;
+  position: relative;
+
+  padding: 30px;
+}
+
+.container-create .card {
+  position: relative;
+  max-width: 300px;
+  height: 250px;
+  background-color: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.container-create .card .image {
+  position: relative;
+  width: 260px;
+  height: 260px;
+
+  top: -40%;
+  left: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.container-create .card .image img {
+  max-width: 100%;
+  border-radius: 15px;
+  /*margin-top: 50px;*/
+}
+
+.container-create .card .content {
+  position: relative;
+  top: -80px;
+  padding: 10px 15px;
+  color: #111;
+  text-align: center;
+
+  transition: 0.3s ease-in-out;
+}
+.container-create .card .content h3 {
+  font-size: 30px;
+}
