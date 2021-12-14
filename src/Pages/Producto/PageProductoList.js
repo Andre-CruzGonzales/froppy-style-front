@@ -13,7 +13,7 @@ const PageProductoList = () => {
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        "http://https://desarrollo-software.herokuapp.com/api/productos/get"
+        "http://https://20.124.206.156:10801/api/productos/get"
       );
       console.log(res);
       setData(res.data);

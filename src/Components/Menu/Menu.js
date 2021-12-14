@@ -14,6 +14,9 @@ const Menu = () => {
     if (activeIndex.label === "Home") {
       await history.push("/");
     }
+    if (activeIndex.label === "Producto") {
+      await history.push("/productList");
+    }
   };
   const items = [
     { label: "Home", icon: "pi pi-fw pi-home" },

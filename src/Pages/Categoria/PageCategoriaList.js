@@ -13,8 +13,9 @@ const PageCategoriaList = () => {
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        "http://https://desarrollo-software.herokuapp.com/api/categorias/get"
+        "https://20.124.206.156:10801/api/categorias/get"
       );
+      //"http://localhost:10801/api/categorias/get"
       console.log(res);
       setData(res.data);
     })();

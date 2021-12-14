@@ -23,7 +23,7 @@ const PageProductoCreate = () => {
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        "http://https://desarrollo-software.herokuapp.com/api/categorias/get"
+        "http://https://20.124.206.156:10801/api/categorias/get"
       );
       console.log(res);
       setCategorias(res.data);
