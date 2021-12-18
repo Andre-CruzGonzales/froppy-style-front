@@ -38,7 +38,7 @@ function PageLogin() {
   const getMy = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:10801/api/my"
+        "http://20.127.134.26:10801/api/my"
         //"http://20.124.206.156:10801/api/categorias/create",
 
         //headers: headers,
@@ -52,7 +52,7 @@ function PageLogin() {
     //console.log(file);
 
     const res = await axios.post(
-      "http://localhost:10801/api/login",
+      "http://20.127.134.26:10801/api/login",
       //"http://20.124.206.156:10801/api/categorias/create",
       login
     );
@@ -87,7 +87,7 @@ function PageLogin() {
         return;
       }
       try {
-        const res = await axios.get("http://localhost:10801/api/my");
+        const res = await axios.get("http://20.127.134.26:10801/api/my");
         setUsuario(res.data.data.user);
         setCargandoUsuario(false);
         console.log("============");

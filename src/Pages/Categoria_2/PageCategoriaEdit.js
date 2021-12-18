@@ -33,7 +33,7 @@ const PageCategoriaEdit = () => {
       return;
     }
     try {
-      const res = await axios.get("http://localhost:10801/api/my");
+      const res = await axios.get("http://20.127.134.26:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
@@ -54,7 +54,7 @@ const PageCategoriaEdit = () => {
     cargarUsuario();
     (async () => {
       const res = await axios.get(
-        `http://localhost:10801/api/categorias/get/${params.id}`
+        `http://20.127.134.26:10801/api/categorias/get/${params.id}`
       );
       console.log(res.data);
       setCategoria(res.data);
@@ -79,7 +79,7 @@ const PageCategoriaEdit = () => {
     formData.append("estado", categoria.estado);
     const res = await axios.put(
       //`http://20.124.206.156:10801/api/categorias/update/${params.id}`,
-      `http://localhost:10801/api/categorias/update/${params.id}`,
+      `http://20.127.134.26:10801/api/categorias/update/${params.id}`,
       formData
     );
     console.log(res);

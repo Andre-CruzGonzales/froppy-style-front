@@ -16,7 +16,7 @@ const PageCategoriaList = () => {
     (async () => {
       const res = await axios.get(
         //"http://20.124.206.156:10801/api/categorias/get"
-        "http://localhost:10801/api/categorias/get"
+        "http://20.127.134.26:10801/api/categorias/get"
       );
       //"http://localhost:10801/api/categorias/get"
       console.log(res);
