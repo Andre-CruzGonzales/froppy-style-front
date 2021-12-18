@@ -1,0 +1,19 @@
+.button-edit {
+  margin-left: 50px;
+}
+.my-catalogo-edit {
+  display: flex;
+
+  /*justify-content: space-between;*/
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-right: 0px;
+}
+.my-catalogo-edit .item-1 {
+  margin-right: 0px;
+
+  /*width: 50wh;*/
+}
+.my-catalogo-edit .item-2 {
+}

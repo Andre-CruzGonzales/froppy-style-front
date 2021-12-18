@@ -1,14 +1,16 @@
-.contenedor {
+.contenedor-pageCategoria-create {
   display: flex;
   /*justify-content: space-between;*/
   margin: 50px;
   border-radius: 20px;
   background-color: #fff;
 }
-.contenedor .item-1 {
+.contenedor-pageCategoria-create .item-1 {
   margin-right: 20%;
+  margin-top: 20px;
+  margin-left: 10%;
   /*width: 50wh;*/
 }
-.contenedor .item-2 {
+.contenedor-pageCategoria-create .item-2 {
   width: 40vw;
 }

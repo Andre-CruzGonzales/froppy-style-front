@@ -1,0 +1,16 @@
+.contenedor-form-add-catalogo {
+  display: flex;
+
+  /*justify-content: space-between;*/
+  margin: 50px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.contenedor-form-add-catalogo .item-1 {
+  margin-right: 20%;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+.contenedor-form-add-catalogo .item-2 {
+}

@@ -3,7 +3,7 @@ import { TabMenu } from "primereact/tabmenu";
 import { Button } from "primereact/button";
 import { useHistory } from "react-router-dom";
 import { deleteToken } from "../../Routes/ValidateToken";
-const Menu = () => {
+const MenuAdministrador = () => {
   const [activeIndex, setActiveIndex] = useState(3);
   const history = useHistory();
   const handleTabChange = async (e) => {
@@ -30,8 +30,8 @@ const Menu = () => {
     }
   };
   const items = [
-    { id: 4, label: "Productos", icon: "pi pi-folder-open" },
-    { id: 5, label: "Mi Catalogo", icon: "pi pi-paperclip" },
+    { id: 2, label: "Categoria", icon: "pi pi-inbox" },
+    { id: 3, label: "Producto", icon: "pi pi-briefcase" },
     { id: 6, label: "Cerrar Sesión", icon: "pi pi-power-off" },
   ];
 
@@ -74,4 +74,4 @@ const Menu = () => {
     </div>
   );
 };
-export { Menu };
+export { MenuAdministrador };
