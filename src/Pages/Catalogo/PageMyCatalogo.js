@@ -44,7 +44,7 @@ const PageMyCatalogo = () => {
       return;
     }
     try {
-      const res = await axios.get("http://localhost:10801/api/my");
+      const res = await axios.get("http://20.127.134.26:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
@@ -65,9 +65,9 @@ const PageMyCatalogo = () => {
     (async () => {
       const res = await axios.get(
         //"http://20.124.206.156:10801/api/categorias/get"
-        "http://localhost:10801/api/catalogos/get"
+        "http://20.127.134.26:10801/api/catalogos/get"
       );
-      //"http://localhost:10801/api/categorias/get"
+      //"http://20.127.134.26:10801/api/categorias/get"
       if (res) {
         console.log(res.data);
         setData(res.data);
@@ -88,10 +88,10 @@ const PageMyCatalogo = () => {
       console.log(estado);
       const res = await axios.put(
         //"http://20.124.206.156:10801/api/categorias/get"
-        `http://localhost:10801/api/catalogos/visibility/${object._id}`,
+        `http://20.127.134.26:10801/api/catalogos/visibility/${object._id}`,
         { estado: estado }
       );
-      //"http://localhost:10801/api/categorias/get"
+      //"http://20.127.134.26:10801/api/categorias/get"
       console.log(res);
       get();
     })();
@@ -100,10 +100,10 @@ const PageMyCatalogo = () => {
     (async () => {
       const res = await axios.put(
         //"http://20.124.206.156:10801/api/categorias/get"
-        `http://localhost:10801/api/catalogos/update/${object._id}`,
+        `http://20.127.134.26:10801/api/catalogos/update/${object._id}`,
         { precio_venta: object.precio_venta }
       );
-      //"http://localhost:10801/api/categorias/get"
+      //"http://20.127.134.26:10801/api/categorias/get"
       console.log(res);
       get();
     })();
@@ -197,7 +197,7 @@ const PageMyCatalogo = () => {
 
     const res = await axios.put(
       //`http://20.124.206.156:10801/api/categorias/update/${params.id}`,
-      `http://localhost:10801/api/catalogos/update/${object._id}`,
+      `http://20.127.134.26:10801/api/catalogos/update/${object._id}`,
       { precio: object.precio_venta }
     );
     console.log(res);

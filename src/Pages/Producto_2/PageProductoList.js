@@ -39,7 +39,7 @@ const PageProductoList = () => {
       return;
     }
     try {
-      const res = await axios.get("http://localhost:10801/api/my");
+      const res = await axios.get("http://20.127.134.26:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
@@ -61,9 +61,9 @@ const PageProductoList = () => {
     (async () => {
       const res = await axios.get(
         //"http://20.124.206.156:10801/api/categorias/get"
-        "http://localhost:10801/api/productos/get"
+        "http://20.127.134.26:10801/api/productos/get"
       );
-      //"http://localhost:10801/api/categorias/get"
+      //"http://20.127.134.26:10801/api/categorias/get"
       //console.log(res.data);
       if (res) {
         setData(res.data);
@@ -85,10 +85,10 @@ const PageProductoList = () => {
       console.log(estado);
       const res = await axios.put(
         //"http://20.124.206.156:10801/api/categorias/get"
-        `http://localhost:10801/api/productos/visibility/${object._id}`,
+        `http://20.127.134.26:10801/api/productos/visibility/${object._id}`,
         { estado: estado }
       );
-      //"http://localhost:10801/api/categorias/get"
+      //"http://20.127.134.26:10801/api/categorias/get"
       console.log(res);
       get();
     })();

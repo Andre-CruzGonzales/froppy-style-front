@@ -20,7 +20,7 @@ function PageRegistro() {
     //console.log(file);
 
     const res = await axios.post(
-      "http://localhost:10801/api/usuarios/create",
+      "http://20.127.134.26:10801/api/usuarios/create",
       //"http://20.124.206.156:10801/api/categorias/create",
       usuario
     );
