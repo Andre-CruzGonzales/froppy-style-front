@@ -37,7 +37,7 @@ const PageAddCatalogo = () => {
   const getProductoByID = () => {
     (async () => {
       const res = await axios.get(
-        `http://20.127.134.26:10801/api/productos/get/${params.id}`
+        `http://localhost:10801/api/productos/get/${params.id}`
       );
       console.log(res.data);
       setProducto(res.data);
@@ -50,7 +50,7 @@ const PageAddCatalogo = () => {
       return;
     }
     try {
-      const res = await axios.get("http://20.127.134.26:10801/api/my");
+      const res = await axios.get("http://localhost:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
@@ -92,7 +92,7 @@ const PageAddCatalogo = () => {
     e.preventDefault();
     //console.log(file);
     const res = await axios.post(
-      "http://20.127.134.26:10801/api/catalogos/create",
+      "http://localhost:10801/api/catalogos/create",
       {
         producto: catalogo.producto,
         precio_venta: catalogo.precio_venta,
@@ -111,7 +111,7 @@ const PageAddCatalogo = () => {
 
   /*----------fin handles---------------*/
   useEffect(() => {
-    //cargarUsuario();
+    cargarUsuario();
     getProductoByID();
   }, [params.id]);
   return (

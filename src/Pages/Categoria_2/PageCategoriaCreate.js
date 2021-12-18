@@ -27,8 +27,8 @@ const PageCategoriaCreate = () => {
     setCategoria(e.target.value);
   };
   useEffect(() => {
-    //cargarUsuario();
-  });
+    cargarUsuario();
+  }, []);
   async function cargarUsuario() {
     if (!getToken()) {
       setCargandoUsuario(false);
@@ -36,14 +36,14 @@ const PageCategoriaCreate = () => {
       return;
     }
     try {
-      const res = await axios.get("http://20.127.134.26:10801/api/my");
+      const res = await axios.get("http://localhost:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
       console.log(usuario);
       if (usuario) {
         if (usuario.rol === 1) {
-          history.push("/addCategory");
+          history.push("/categoryList");
         }
         if (usuario.rol === 2) {
           history.push("/productsList");
@@ -61,7 +61,7 @@ const PageCategoriaCreate = () => {
     formData.append("nombre", categoria);
     formData.append("estado", "A");
     const res = await axios.post(
-      "http://20.127.134.26:10801/api/categorias/create",
+      "http://localhost:10801/api/categorias/create",
       //"http://20.124.206.156:10801/api/categorias/create",
       formData
     );

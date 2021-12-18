@@ -38,7 +38,7 @@ const PageProductoEdit = () => {
       return;
     }
     try {
-      const res = await axios.get("http://20.127.134.26:10801/api/my");
+      const res = await axios.get("http://localhost:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
@@ -59,7 +59,7 @@ const PageProductoEdit = () => {
     (async () => {
       const res = await axios.get(
         //"http://20.124.206.156:10801/api/productos/create"
-        "http://20.127.134.26:10801/api/categorias/get"
+        "http://localhost:10801/api/categorias/get"
       );
       console.log(res);
       setCategorias(res.data);
@@ -67,10 +67,10 @@ const PageProductoEdit = () => {
   };
   /*------------fin servicios---------------*/
   useEffect(() => {
-    //cargarUsuario();
+    cargarUsuario();
     (async () => {
       const res = await axios.get(
-        `http://20.127.134.26:10801/api/productos/get/${params.id}`
+        `http://localhost:10801/api/productos/get/${params.id}`
       );
       console.log(res.data.categoria);
       setProducto(res.data);
@@ -109,11 +109,11 @@ const PageProductoEdit = () => {
     formData.append("categoria", producto.categoria);
     const res = await axios.put(
       //`http://20.124.206.156:10801/api/categorias/update/${params.id}`,
-      `http://20.127.134.26:10801/api/productos/update/${params.id}`,
+      `http://localhost:10801/api/productos/update/${params.id}`,
       formData
     );
     console.log(res);
-    //history.push("/productList");
+    history.push("/productList");
   };
   const onChangeCategoria = (e) => {
     setSelectedCategoria(e.value);

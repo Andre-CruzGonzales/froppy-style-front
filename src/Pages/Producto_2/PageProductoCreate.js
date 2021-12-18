@@ -38,14 +38,14 @@ const PageProductoCreate = () => {
       return;
     }
     try {
-      const res = await axios.get("http://20.127.134.26:10801/api/my");
+      const res = await axios.get("http://localhost:10801/api/my");
       setUsuario(res.data.data.user);
       setCargandoUsuario(false);
       console.log("============");
       console.log(usuario);
       if (usuario) {
         if (usuario.rol === 1) {
-          history.push("/createProducto");
+          history.push("/categoryList");
         }
         if (usuario.rol === 2) {
           history.push("/productsList");
@@ -59,7 +59,7 @@ const PageProductoCreate = () => {
     (async () => {
       const res = await axios.get(
         //"http://20.124.206.156:10801/api/productos/create"
-        "http://20.127.134.26:10801/api/categorias/get"
+        "http://localhost:10801/api/categorias/get"
       );
       console.log(res);
       setCategorias(res.data);
@@ -98,7 +98,7 @@ const PageProductoCreate = () => {
     formData.append("categoria", producto.categoria);
     formData.append("descripcion", producto.descripcion);
     const res = await axios.post(
-      "http://20.127.134.26:10801/api/productos/create",
+      "http://localhost:10801/api/productos/create",
       formData
     );
 
