@@ -45,7 +45,7 @@ const PageProductoCreate = () => {
       console.log(usuario);
       if (usuario) {
         if (usuario.rol === 1) {
-          history.push("/categoryList");
+          history.push("/createProducto");
         }
         if (usuario.rol === 2) {
           history.push("/productsList");
@@ -67,7 +67,7 @@ const PageProductoCreate = () => {
   };
   /*------------fin servicios---------------*/
   useEffect(() => {
-    cargarUsuario();
+    //cargarUsuario();
   });
   /*----------handles--------------------*/
   const handleInputChange = (e) => {

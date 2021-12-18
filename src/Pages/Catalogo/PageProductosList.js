@@ -97,7 +97,7 @@ const PageProductosList = () => {
   /*fin servicios---*/
 
   useEffect(() => {
-    cargarUsuario();
+    //cargarUsuario();
     get();
   }, []);
 

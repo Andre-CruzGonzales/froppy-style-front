@@ -111,7 +111,7 @@ const PageMyCatalogo = () => {
   /*fin servicios---*/
 
   useEffect(() => {
-    cargarUsuario();
+    //cargarUsuario();
     get();
   }, []);
 

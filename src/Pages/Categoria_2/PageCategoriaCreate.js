@@ -27,7 +27,7 @@ const PageCategoriaCreate = () => {
     setCategoria(e.target.value);
   };
   useEffect(() => {
-    cargarUsuario();
+    //cargarUsuario();
   });
   async function cargarUsuario() {
     if (!getToken()) {
@@ -43,7 +43,7 @@ const PageCategoriaCreate = () => {
       console.log(usuario);
       if (usuario) {
         if (usuario.rol === 1) {
-          history.push("/categoryList");
+          history.push("/addCategory");
         }
         if (usuario.rol === 2) {
           history.push("/productsList");

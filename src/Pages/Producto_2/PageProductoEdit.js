@@ -67,7 +67,7 @@ const PageProductoEdit = () => {
   };
   /*------------fin servicios---------------*/
   useEffect(() => {
-    cargarUsuario();
+    //cargarUsuario();
     (async () => {
       const res = await axios.get(
         `http://20.127.134.26:10801/api/productos/get/${params.id}`

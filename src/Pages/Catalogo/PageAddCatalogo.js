@@ -111,7 +111,7 @@ const PageAddCatalogo = () => {
 
   /*----------fin handles---------------*/
   useEffect(() => {
-    cargarUsuario();
+    //cargarUsuario();
     getProductoByID();
   }, [params.id]);
   return (
